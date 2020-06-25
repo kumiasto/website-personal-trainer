@@ -1,0 +1,132 @@
+.offer{
+    @include gridCenter;
+    @include pageContent;
+    background-image: url('/img/offer-mobile.jpg');
+    left: 0;
+    color: $primaryColor;
+    &__type{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        background-color: $bgcColor;
+        transition: opacity .3s ease-in;
+        &--hidden{
+            opacity: 0;
+        }
+    }
+    &__type-header{
+        margin-top: 12vh;
+        text-align: center;
+        font-size: 2.2rem;
+        letter-spacing: .2vh;
+        &--hidden{
+            visibility: hidden;
+        }
+    }
+    &__training, &__diet, &__personal{
+        @include center;
+        @include options;
+        border-bottom: 2px solid $primaryColor;
+    }
+    &__training{
+        border-top: 2px solid $primaryColor;
+    }
+    &__description-training,&__description-diet,&__description-personal{
+        @include descriptionOptions;
+    }
+    &__description-h2{
+        padding-top: 5vh;
+        text-align: center;
+    }
+    &__tranining-text,&__diet-text,&__personal-text{
+        @include textOptions;
+        padding-top: 3vh;
+    }
+    &__close-training, &__close-diet, &__close-personal{
+        @include buttonClose;
+    }
+    &__training-li, &__diet-li, &__personal-li{
+        @include liOptions;
+    }
+}
+
+/* @media */
+
+@media screen and (min-width: 620px){
+    .offer{
+        &__type-header{
+            font-size: 3.3rem;
+        }
+        &__training,&__diet,&__personal{
+            font-size: 3rem;
+        }
+        &__description-h2{
+            padding-top: 5vh;
+            font-size: 3.5rem;
+        }
+        &__tranining-text,&__diet-text,&__personal-text{
+            font-size: 1.6rem;
+        }
+        &__close-training, &__close-diet, &__close-personal{
+            font-size: 3rem;
+        }
+        &__training-li, &__diet-li, &__personal-li{
+            font-size: 1.7rem;
+        }
+    }
+}
+@media screen and (min-width: 960px){
+    .offer{
+        &__tranining-text,&__diet-text,&__personal-text{
+            padding-top: 5vh;
+            font-size: 2.3rem;
+        }
+        &__close-training, &__close-diet, &__close-personal{
+            font-size: 4rem;
+        }
+        &__training-li, &__diet-li, &__personal-li{
+            font-size: 2.3rem;
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    .offer{
+        background-image: url('/img/offer-desktop.jpg');
+        background-size: cover;
+
+        &__type-header{
+            font-size: 2rem;
+        }
+        &__training, &__diet, &__personal{
+            font-size: 1.5rem;
+            border-bottom: 2px solid $primaryColor;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(0, 102, 255, .5);
+            }
+        }
+        &__description-h2{
+            font-size: 2.5rem;
+        }
+        &__tranining-text,&__diet-text,&__personal-text{
+            font-size: 1.8rem;
+            padding: 2vh 5vw;
+        }
+        &__description-training,&__description-diet,&__description-personal{
+            z-index: 9;
+        }
+        &__close-training, &__close-diet, &__close-personal{
+            font-size: 2.5rem;
+            cursor: pointer;
+        }
+        &__training-li, &__diet-li, &__personal-li{
+            font-size: 1.4rem;
+            padding-left: 5vw;
+        }
+    }
+}
+
+

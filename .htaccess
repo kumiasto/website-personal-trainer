@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteEngine On
+
+RewriteRule strona-glowna index.html
+RewriteRule kontakt kontakt.html
+RewriteRule o-mnie omnie.html
+RewriteRule oferta oferta.html
+
+

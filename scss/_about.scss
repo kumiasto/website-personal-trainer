@@ -1,0 +1,81 @@
+.info{
+    @include pageContent;
+    background-image: url('/img/about-gym-mobile.jpg');
+    background-size: cover;
+    &__text{
+        height: auto;
+        font-size: .9rem;
+        padding: 7vh 5vw;
+        line-height: 2;
+        background-color: $bgcColor;
+        color: $primaryColor;
+        text-align: justify;
+        &-section-one, &-section-two{
+            padding-bottom: 10vh;
+        }
+        &-section-three{
+            padding-bottom: 5vh;
+            font-size: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+        }
+        &-li{
+            color: $primaryColor;
+            list-style-type: square;
+            padding-bottom: 5vh;
+        }
+    }
+}
+.footer--fixed{
+ position: fixed;
+ background: #000;
+ bottom: 0;
+ width: 100%;
+ height: 5% !important;
+}
+
+/* @media */
+
+@media screen and (min-width: 620px){
+    .info{
+        background-image: url('/img/about-gym-desktop.jpg');
+        height: 235vh;
+        &__text{
+        padding: 15vh 10vw;
+        font-size: 1.9rem;
+        }
+        &-section-three{
+            font-size: 10rem;
+        }
+        &__h2{
+            text-align: center;
+            font-size: 2.7rem;
+            padding-bottom: 5vh;
+        }
+    }
+}
+@media screen and (min-width: 960px){
+    .info{
+        height:186vh;
+        &__text{
+            padding: 15vh 10vw;
+            font-size: 2.1rem;
+        }
+        &__h2{
+            font-size: 3rem;
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    .info{
+        height:165vh;
+        &__text{
+        padding: 20vh 10vw;
+        font-size: 1.2rem;
+        height: 100%;
+        }
+        &__h2{
+            font-size: 2.3rem;
+        }
+    }
+}
