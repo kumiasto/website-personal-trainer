@@ -1,6 +1,8 @@
 # Website for personal trainer
 
-### With HTML, SCSS & JavaScript
+* HTML
+* CSS
+* JavaScript
 
 ### [Live preview](https://relaxed-cray-ce0da6.netlify.app)
 
